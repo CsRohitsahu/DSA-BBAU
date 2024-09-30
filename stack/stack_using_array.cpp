@@ -28,8 +28,8 @@ class Stack{   // creating stack
     top--;
  }
  void display(){  // display element of stack
-    for(int i=0;i<=top;i++){
-        cout<<arr[i]<<" ";
+    for(int i=top;i>=0;i--){
+        cout<<arr[i]<<endl;
     }
     cout<<endl;
  }

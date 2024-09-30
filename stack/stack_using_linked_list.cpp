@@ -47,7 +47,7 @@ class Stack{
     }
 
     void pop(){
-        if(head==NULL){
+        if(this->head==NULL){
             cout<<"underflow"<<endl;
             return;
         }
@@ -60,7 +60,7 @@ class Stack{
     void display(){
         Node *temp=head;
         while(temp!=NULL){
-            cout<<temp->data<<" ";
+            cout<<temp->data<<endl;
             temp=temp->next;
         }
         cout<<endl;
