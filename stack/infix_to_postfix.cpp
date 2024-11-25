@@ -38,7 +38,7 @@ string infixToPostfix(string infix){  // this methods convert infix to postfix a
         st.pop(); // popping ( from stack
      }
 
-     else if((c<='Z'&&c>='A')||(c>='a'&&c<='z')){  // checking whether character is operand or operator if operator then append to postfix
+     else if((c<='Z'&&c>='A')||(c>='a'&&c<='z')||c<='9'&&c>='1'){  // checking whether character is operand or operator if operator then append to postfix
         postfix+=c;
      }
      else if(c=='^')  {   // exponent have higer precedence than any other so push it into stack
@@ -48,7 +48,7 @@ string infixToPostfix(string infix){  // this methods convert infix to postfix a
         st.push(c);
      }
      else {
-        while(!st.empty()&&precedence(c)>precedence(st.top())){
+        while(!st.empty()&&precedence(c)<=precedence(st.top())){
             postfix+=st.top();
             st.pop();
         }
