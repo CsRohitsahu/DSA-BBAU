@@ -6,7 +6,7 @@ void merge(vector<int> &arr, int l, int mid, int r); // funciton declaration
 void mergeSort(vector<int> &arr, int l, int r)
 {
     if (l >= r)
-        return; // base case if array have single element it is already sorted
+        return; // base case if array have single element, it is already sorted
     int mid = (l + r) / 2;
     mergeSort(arr, l, mid);
     mergeSort(arr, mid + 1, r);
@@ -22,7 +22,7 @@ void merge(vector<int> &arr, int l, int mid, int r)
     for (int i = 0; i < n1; i++)
         left[i] = arr[l + i]; // filling left array
     for (int j = 0; j < n2; j++)
-        right[j] = arr[mid + 1 + j]; // filling left array
+        right[j] = arr[mid + 1 + j]; // filling right array
     i = 0;
     j = 0;
     k = l;
